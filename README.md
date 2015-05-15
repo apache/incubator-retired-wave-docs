@@ -13,3 +13,17 @@ running, managing and contributing to Apache Wave.
 In the meantime, please continue to use the existing documentation that can be
 found on our [website](http://incubator.apache.org/wave), in the [wiki](https://cwiki.apache.org/confluence/display/WAVE/Home),
 and at [Wave Protocol (old website)](http://www.waveprotocol.org).
+
+Building the Documentation
+--------------------------
+
+You will need Python and Sphinx installed for HTML documentation.
+If you would also like the PDF formats, you will need a LaTeX distribution installed as well.
+
+On a Debian-based distribution, you can probably just run:
+```
+apt-get install texlive-latex-recommended texlive-latex-extra texlive-fonts-recommended
+```
+
+To build the actual documentation, you should run `make doc-html` or `make doc-pdf`, depending on which type you want.
+To see all commands, please run `make help`.
