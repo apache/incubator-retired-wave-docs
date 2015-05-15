@@ -40,7 +40,8 @@ I18NSPHINXOPTS  = $(PAPEROPT_$(PAPER)) $(SPHINXOPTS) source
 
 help:
 	@echo "Please use \`make <target>' where <target> is one of"
-	@echo "  html       to make standalone HTML files"
+	@echo "  doc-html       to make standalone HTML files"
+	@echo "  doc-pdf        to make standalone PDF files"
 
 clean:
 	rm -rf $(BUILDDIR)/*
