@@ -15,19 +15,14 @@
    specific language governing permissions and limitations
    under the License.
 
+Wave Logo Usage
+===============
 
-Apache Wave (incubating)'s Developer documentation!
-===================================================
+The following Wave Logo can be used, reproduced, and modified freely in accordance with the
+Creative Commons Attribution (CC-BY) license. When using the Wave Logo or any modification of it, proper attribution
+is required under the terms of the Creative Commons Attribution license.
 
-.. toctree::
-   :maxdepth: 2
-   :includehidden:
+.. image:: ../general/images/OpenWaveLogo.png
 
-   Contributing/index
-   Code Walk/index
-   Tutorials/index
-   socialMediaGuideLines
-   logoUsage
-   Resources/Presentations
-   Resources/readings
-   DesignStructure/Overview
+
+.. _Vector Wave Logo: https://cwiki.apache.org/confluence/download/attachments/31823332/OpenWaveLogo.eps?version=1&modificationDate=1369894230000&api=v2
