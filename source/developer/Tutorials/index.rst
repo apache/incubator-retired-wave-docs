@@ -15,19 +15,13 @@
    specific language governing permissions and limitations
    under the License.
 
+Tutorials
+=========
 
-Apache Wave (incubating)'s Developer documentation!
-===================================================
+**TODO:** flesh out tutorials from the community, develop a structure here
 
 .. toctree::
-   :maxdepth: 2
-   :includehidden:
+   :maxdepth: 1
 
-   Contributing/index
-   Code Walk/index
-   Tutorials/index
-   socialMediaGuideLines
-   logoUsage
-   Resources/Presentations
-   Resources/readings
-   DesignStructure/Overview
+   navCodebase
+   dooDad

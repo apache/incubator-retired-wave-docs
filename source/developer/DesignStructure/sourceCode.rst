@@ -15,19 +15,7 @@
    specific language governing permissions and limitations
    under the License.
 
+Source Code Organization
+========================
 
-Apache Wave (incubating)'s Developer documentation!
-===================================================
-
-.. toctree::
-   :maxdepth: 2
-   :includehidden:
-
-   Contributing/index
-   Code Walk/index
-   Tutorials/index
-   socialMediaGuideLines
-   logoUsage
-   Resources/Presentations
-   Resources/readings
-   DesignStructure/Overview
+.. image:: code_overview.png

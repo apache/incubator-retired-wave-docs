@@ -15,19 +15,23 @@
    specific language governing permissions and limitations
    under the License.
 
+Repository Structure
+====================
 
-Apache Wave (incubating)'s Developer documentation!
-===================================================
+The official Apache Wave repository can be browsed here: https://svn.apache.org/repos/asf/incubator/wave/ . Its structure is as follows:
 
-.. toctree::
-   :maxdepth: 2
-   :includehidden:
+Wave In A Box code:
 
-   Contributing/index
-   Code Walk/index
-   Tutorials/index
-   socialMediaGuideLines
-   logoUsage
-   Resources/Presentations
-   Resources/readings
-   DesignStructure/Overview
+* /trunk: Holds the most up-to-date code.
+* /branches/wave-<version>-release: Public Apache releases. E.g. wave-0.4-release
+* /branches/<author>-<branch name>: Development branches. E.g. stenyak-email_bot or alown-federation_fixes
+* /tags/wave-<version>: E.g. wave-0.4-rc2
+
+Experiments code:
+
+* /experiments/<experiment name>: projects independent from Wave In A Box but related to wave concept. E.g. p2p
+
+Documentation:
+
+* /site/: contents of the Apache Wave website
+* /whitepapers/: additional documentation about Wave in general (protocols, etc).
