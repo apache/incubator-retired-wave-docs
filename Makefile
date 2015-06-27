@@ -102,7 +102,7 @@ protocol-html:
 	@echo "Build finished. The HTML pages are in $(BUILDDIR)/protocol/html."
 
 protocol-pdf:
-	$(SPHINXBUILD) -b latex $(ALLSPHINXOPTS) source/manual $(BUILDDIR)/protocol/pdf
+	$(SPHINXBUILD) -b latex $(ALLSPHINXOPTS) source/protocol $(BUILDDIR)/protocol/pdf
 	@echo "Running LaTeX files through pdflatex..."
 	$(MAKE) -C $(BUILDDIR)/protocol/pdf all-pdf
 	@echo "pdflatex finished; the PDF files are in $(BUILDDIR)/protocol/pdf."
