@@ -242,7 +242,7 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-  (master_doc, 'ApacheWaveincubating.tex', u'Apache Wave (incubating) Api Documentation',
+  (master_doc, 'ApacheWaveAPI-' + version + '.tex', u'Apache Wave (incubating) Api Documentation',
    u'The Apache Wave Foundation', 'manual'),
 ]
 
