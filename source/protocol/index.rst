@@ -19,8 +19,19 @@
 Apache Wave (incubating)'s Protocol documentation
 =================================================
 
-Contents:
+The following Papers talk about the protocols and foundations of Apache Wave. Were applicable the original authors have
+been credited for the publication and each document has had revision by the Apache Software Foundation.
+
+Apache Wave has been through many revisions, first Google Wave then WIAB (Wave in a Box) until it joined the Apache
+Incubator. The structure of wave is complicated and has many moving parts and specification, these papers will include
+high level technical information about how Apache Wave comes together.
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
+
+   operational-transform/operational-transform
+   google-wave-architecture/google-wave-architecture
+   client-server-protocol/client-server-protocol
+   access-control/access-control
+   attachments/attachments
 
