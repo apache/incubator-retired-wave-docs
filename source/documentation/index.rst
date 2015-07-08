@@ -24,6 +24,7 @@ Apache Wave (incubating)'s documentation
     :maxdepth: 2
     :includehidden:
 
+    faq
     Introduction/index
     About/index
     Installing/index

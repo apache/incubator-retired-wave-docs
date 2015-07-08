@@ -1,4 +1,4 @@
-.. Licensed to the Apache Software Foundation (ASF) under one
+7.. Licensed to the Apache Software Foundation (ASF) under one
    or more contributor license agreements.  See the NOTICE file
    distributed with this work for additional information
    regarding copyright ownership.  The ASF licenses this file
@@ -15,15 +15,6 @@
    specific language governing permissions and limitations
    under the License.
 
-Apache Wave (incubating)'s API
-==============================
+FAQ
+===
 
-This documentation is under development and currently is lacking in content. Visit https://incubator.apache.org/wave/ to
-learn more.
-
-Contents:
-
-.. toctree::
-   :maxdepth: 2
-
-   faq

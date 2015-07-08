@@ -15,15 +15,5 @@
    specific language governing permissions and limitations
    under the License.
 
-Apache Wave (incubating)'s API
-==============================
-
-This documentation is under development and currently is lacking in content. Visit https://incubator.apache.org/wave/ to
-learn more.
-
-Contents:
-
-.. toctree::
-   :maxdepth: 2
-
-   faq
+FAQ
+===

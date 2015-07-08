@@ -23,6 +23,7 @@ Apache Wave (incubating)'s Developer documentation!
    :maxdepth: 2
    :includehidden:
 
+   faq
    Contributing/index
    Code Walk/index
    Tutorials/index
