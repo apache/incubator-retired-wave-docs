@@ -23,3 +23,4 @@ Apache Wave (incubating)'s User Manual
    :maxdepth: 2
 
    faq
+   Installing/index
