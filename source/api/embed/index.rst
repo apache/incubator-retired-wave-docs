@@ -15,21 +15,5 @@
    specific language governing permissions and limitations
    under the License.
 
-Apache Wave (incubating)'s API
-==============================
-
-This documentation is an effort to transfer files from the documents provided
-by Google Wve in the effort to open source the Google Wave Project. Please note
-that the "Google Wave" documentation while most is still relevant for Apache
-Wave some things differ.
-
-.. toctree::
-   :maxdepth: 2
-
-   overview
-   faq/index
-   data/index
-   embed/index
-   extensions/index
-   gadgets/index
-   robots/index
+Title
+=====
