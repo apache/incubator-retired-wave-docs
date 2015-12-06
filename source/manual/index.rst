@@ -19,7 +19,7 @@
 Apache Wave (incubating)'s User Manual
 ======================================
 
-Contents:
-
 .. toctree::
    :maxdepth: 2
+
+   faq

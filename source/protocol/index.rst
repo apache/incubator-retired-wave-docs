@@ -29,6 +29,7 @@ high level technical information about how Apache Wave comes together.
 .. toctree::
    :maxdepth: 1
 
+   faq
    operational-transform/operational-transform
    google-wave-architecture/google-wave-architecture
    client-server-protocol/client-server-protocol

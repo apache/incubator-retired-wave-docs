@@ -1,4 +1,4 @@
-.. Licensed to the Apache Software Foundation (ASF) under one
+7.. Licensed to the Apache Software Foundation (ASF) under one
    or more contributor license agreements.  See the NOTICE file
    distributed with this work for additional information
    regarding copyright ownership.  The ASF licenses this file
@@ -15,20 +15,6 @@
    specific language governing permissions and limitations
    under the License.
 
+FAQ
+===
 
-Apache Wave (incubating)'s Developer documentation!
-===================================================
-
-.. toctree::
-   :maxdepth: 2
-   :includehidden:
-
-   faq
-   Contributing/index
-   Code Walk/index
-   Tutorials/index
-   socialMediaGuideLines
-   logoUsage
-   Resources/Presentations
-   Resources/readings
-   DesignStructure/Overview

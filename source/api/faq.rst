@@ -15,20 +15,5 @@
    specific language governing permissions and limitations
    under the License.
 
-
-Apache Wave (incubating)'s Developer documentation!
-===================================================
-
-.. toctree::
-   :maxdepth: 2
-   :includehidden:
-
-   faq
-   Contributing/index
-   Code Walk/index
-   Tutorials/index
-   socialMediaGuideLines
-   logoUsage
-   Resources/Presentations
-   Resources/readings
-   DesignStructure/Overview
+FAQ
+===
