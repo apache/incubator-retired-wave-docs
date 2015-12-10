@@ -28,7 +28,9 @@ into your own wave server.
 You can try it out the new raw deltas option as follows:
 
 First, authenticate with OAuth to get an access token. You can do that at the
-OAuth Playground (http://googlecodesamples.com/oauth_playground/):
+OAuth Playground
+
+(http://googlecodesamples.com/oauth_playground/):
 
 * Choose your Scope(s): tick the Wave box
 * Modify the OAuth Parameters: select HMAC-SHA1 and enter "anonymous" in the two
@@ -41,20 +43,23 @@ OAuth Playground (http://googlecodesamples.com/oauth_playground/):
 
 Download and unzip the python robot client library in a fresh directory with
 the commands:
-curl -O http://wave-robot-python-client.googlecode.com/files/wave-robot-api-v2-20101202.zip
-unzip wave-robot-api-v2-20101202.zip
+
+`curl -O http://wave-robot-python-client.googlecode.com/files/wave-robot-api-v2-20101202.zip
+unzip wave-robot-api-v2-20101202.zip`
 
 start python in this directory and run the following commands:
 
-import waveservice
-w = waveservice.WaveService()
-w.set_access_token("oauth_token=1%2F...&oauth_token_secret=...")
-# the access token string from above
-f = w.fetch_wavelet('googlewave.com!w+tYBKatJxA', raw_deltas_from_version=0)
-# this wave is public
-f.raw_deltas  # prints the base64 encoded raw deltas
+.. code-block:: python
 
-The WaveService() method takes an optional use_sandbox=True argument, if you
+    import waveservice
+    w = waveservice.WaveService()
+    w.set_access_token("oauth_token=1%2F...&oauth_token_secret=...")
+    # the access token string from above
+    f = w.fetch_wavelet('googlewave.com!w+tYBKatJxA', raw_deltas_from_version=0)
+    # this wave is public
+    f.raw_deltas  # prints the base64 encoded raw deltas
+
+The `WaveService()` method takes an optional use_sandbox=True argument, if you
 want to access waves from WaveSandbox.com. Replace the wave id above with the
 id of the wave which you want to export.
 
@@ -64,9 +69,9 @@ program to parse the base 64 string. The deltas have no signatures and no
 history hashes.
 
 Some caveats:
-Because of the simplistic access control in the Data API, you can only export a
-wavelet on which you are an explicit participant or which is public
-(has public@a.gwave.com as participant).
+    Because of the simplistic access control in the Data API, you can only
+    export a wavelet on which you are an explicit participant or which is public
+    (has public@a.gwave.com as participant).
 
 You can only export conversation wavelets, not userdata wavelets.
 

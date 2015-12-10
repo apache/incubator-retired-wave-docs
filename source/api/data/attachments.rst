@@ -22,8 +22,6 @@ An attachment is a type of element. Just like other elements, it can be
 created, updated, and deleted from a blip. For more information on doing
 operations on a blip, please refer to Blip Operations.
 
-Contents
-
 .. toctree::
 
 Reading Attachements
@@ -46,30 +44,33 @@ The following is a java example of getting a list of urls for all attachments
 in the blip. The code first iterates over all of the elements in a blip. If an
 element is an attachment, it gets the attachment URL, and puts it into a list:
 
-* blip.getElements().values() returns all of the elements in a blip.
-* element.isAttachment() returns true if the element is an attachment.
-* ((Attachment)element).getAttachmentUrl() returns the attachment URL.
+* `blip.getElements().values()` returns all of the elements in a blip.
+* `element.isAttachment()` returns true if the element is an attachment.
+* `((Attachment)element).getAttachmentUrl()` returns the attachment URL.
 
-private List<String> getAllAttachmentUrls(Blip blip) {
-  List<String> urls = new ArrayList<String>();
-  Collection<Element> elements = blip.getElements().values();
-  for (Element element : elements) {
-    if (element.isAttachment()) {
-      urls.add(((Attachment) element).getAttachmentUrl());
+.. code-block:: java
+
+    private List<String> getAllAttachmentUrls(Blip blip) {
+      List<String> urls = new ArrayList<String>();
+      Collection<Element> elements = blip.getElements().values();
+      for (Element element : elements) {
+        if (element.isAttachment()) {
+          urls.add(((Attachment) element).getAttachmentUrl());
+        }
+      }
+      return urls;
     }
-  }
-  return urls;
-}
 
 The following is a Python example of getting an attachment URL. If the blip has
 an attachment, the code appends the first attachment URL to the blip.
 
+.. code-block:: python
 
-def OnBlipSubmitted(event, wavelet):
-  blip = event.blip
-  attachment = blip.first(element.Attachment)
-  if attachment:
-    blip.append("Attachment URL is:" + attachment.value().get("attachmentUrl"))
+    def OnBlipSubmitted(event, wavelet):
+      blip = event.blip
+      attachment = blip.first(element.Attachment)
+      if attachment:
+        blip.append("Attachment URL is:" + attachment.value().get("attachmentUrl"))
 
 Writing Attachments
 -------------------
@@ -84,50 +85,55 @@ iterates over the blips in a wavelet, gets the text content, creates an
 attachment with the concatenated content as data, and inserts the attachment in
 a new blip:
 
-wavelet.getBlips().values() returns all of the blips in a wavelet.
-blip.all().values() returns the blip contents
-new Attachment("export.txt", exportedWave.toString().getBytes())
+`wavelet.getBlips().values()` returns all of the blips in a wavelet.
+`blip.all().values()` returns the blip contents
+`new Attachment("export.txt", exportedWave.toString().getBytes())`
 returns a new attachment.
 
-private void exportText(Wavelet wavelet) {
-  StringBuilder exportedWave = new StringBuilder();
+.. code-block:: java
 
-  for (Blip blip : wavelet.getBlips().values()) {
-    exportedWave.append(blip.getContent());
-  }
-  Attachment attachment = new Attachment("export.txt",
-      exportedWave.toString().getBytes());
-  wavelet.reply("\n").append(attachment);
-}
+    private void exportText(Wavelet wavelet) {
+      StringBuilder exportedWave = new StringBuilder();
+
+      for (Blip blip : wavelet.getBlips().values()) {
+        exportedWave.append(blip.getContent());
+      }
+      Attachment attachment = new Attachment("export.txt",
+          exportedWave.toString().getBytes());
+      wavelet.reply("\n").append(attachment);
+    }
 
 The following is a python example of creating an attachment in wave. The code
 fetches an URL content, and creates an attachment with the content.
 
+.. code-block:: python
 
-def OnBlipSubmitted(event, wavelet):
-  blip = event.blip
-  fileData=urllib2.urlopen("http://www.google.com/logos/poppy09.gif").read()
-  attachment = element.Attachment(caption="new file", data=fileData)
-  blip.append(attachment)
+    def OnBlipSubmitted(event, wavelet):
+      blip = event.blip
+      fileData=urllib2.urlopen("http://www.google.com/logos/poppy09.gif").read()
+      attachment = element.Attachment(caption="new file", data=fileData)
+      blip.append(attachment)
 
 The following is a java example of importing an attachment into wave by
 replacing it with its content. This example assumes that the attachment in the
 blip is text attachment. The code finds the first attachment in the blip, and
 replaces it with the attachment content:
 
-* blip.first(ElementType.ATTACHMENT) returns a blip content reference of the
+* `blip.first(ElementType.ATTACHMENT)` returns a blip content reference of the
   first attachment.
-* (Attachment) attachmentRef.value() returns an attachment element.
-* attachmentRef.replace(new String(attachment.getData())) replaces an
+* `(Attachment) attachmentRef.value()` returns an attachment element.
+* `attachmentRef.replace(new String(attachment.getData()))` replaces an
   attachment with its content.
 
-private void replaceAttachment(Blip blip) {
-  BlipContentRefs attachmentRef = blip.first(ElementType.ATTACHMENT);
-  if(attachmentRef != null) {
-    Attachment attachment = (Attachment) attachmentRef.value();
-    attachmentRef.replace(new String(attachment.getData()));
-  }
-}
+.. code-block:: java
+
+    private void replaceAttachment(Blip blip) {
+      BlipContentRefs attachmentRef = blip.first(ElementType.ATTACHMENT);
+      if(attachmentRef != null) {
+        Attachment attachment = (Attachment) attachmentRef.value();
+        attachmentRef.replace(new String(attachment.getData()));
+      }
+    }
 
 With the ability of reading and writing attachment in wave, you can do a lot of
 things. Below are a few more ideas in addition to import and export:
