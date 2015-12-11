@@ -156,7 +156,8 @@ add a robot that processes matched content (e.g. emoticons, phone numbers, etc).
 
 * pattern: the pattern to match against while the user is editing a blip.
 
-For example, this regexHook searches for smiley faces, and when it finds one, it prompts the user to add an emoticon robot:
+For example, this regexHook searches for smiley faces, and when it finds one,
+it prompts the user to add an emoticon robot:
 
 .. code-block:: xml
 
