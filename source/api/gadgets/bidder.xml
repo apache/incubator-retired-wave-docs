@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Module>
+<ModulePrefs title="Wave Bidding" height="250">
+  <Require feature="wave-preview" />
+  </ModulePrefs>
+  <Content type="html">
+ <![CDATA[
+
+  <script type="text/javascript">
+    function buttonClicked() {
+      var viewerId = wave.getViewer().getId();
+      var state = wave.getState();
+      var bid = parseInt(document.getElementById('yourBid').value);
+      var currentBid = parseInt(state.get(viewerId, '0'));
+      if (bid > currentBid) {
+        delta = {};
+        delta[viewerId] = bid;
+        state.submitDelta(delta);
+      }
+    }
+
+    function renderInfo() {
+      if (!wave.getState()) {
+        return;
+      }
+
+      var highestBid = 0;
+      var highestBidderId = null;
+      var state = wave.getState();
+      var keys = state.getKeys();
+      for (var i = 0; i < keys.length; ++i) {
+        var bidder = keys[i];
+        var bid = parseInt(state.get(bidder));
+        if (bid > highestBid) {
+          highestBid = bid;
+          highestBidderId = bidder;
+        }
+      }
+      var bidderName = 'Nobody';
+      var thumbNail = 'http://gadget-doc-examples.googlecode.com/svn/trunk/images/unknown.gif';
+      if (highestBidderId) {
+        bidderName = highestBidderId;
+        var participants = wave.getParticipants();
+        var numPeople = participants.length;
+        if (participants) {
+          for (var i = 0; i < participants.length; ++i) {
+            if (participants[i].getId() == highestBidderId) {
+              var highestBidder = participants[i];
+              bidderName = highestBidder.getDisplayName();
+              if (!bidderName) {
+                bidderName = highestBidder.getId();
+              }
+              thumbNail = highestBidder.getThumbnailUrl();
+            }
+          }
+        }
+      }
+      document.getElementById('bidderThumbnail').src = thumbNail;
+      document.getElementById('bidderName').firstChild.nodeValue = bidderName;
+      document.getElementById('highestBid').firstChild.nodeValue = highestBid;
+      document.getElementById('yourBid').value = highestBid;
+      document.getElementById('participants').firstChild.nodeValue = numPeople;
+    }
+
+    function init() {
+      if (wave && wave.isInWaveContainer()) {
+        wave.setStateCallback(renderInfo);
+        wave.setParticipantCallback(renderInfo);
+      }
+    }
+    gadgets.util.registerOnLoadHandler(init);
+  </script>
+  <img id="bidderThumbnail" src="http://gadget-doc-examples.googlecode.com/svn/trunk/images/unknown.gif" width="50" height="50"/><br/>
+  <span id="bidderName">Nobody</span><br/>
+  Highest bid: <span id="highestBid">0</span><br/>
+  Your bid: <input id="yourBid" size="5" value="0"><button id="butCount" onclick="buttonClicked()">Bid</button><br/>
+  Number of wave participants: <span id="participants">1</span></br>
+
+
+  ]]>
+  </Content>
+</Module>

@@ -17,3 +17,19 @@
 
 Title
 =====
+
+Gadgets are a technology used across multiple Google properties to embed
+third-party applications inside our products. In Google Wave, gadgets can be
+used to create collaborative third-party applications inside a wave.
+
+This tutorial describes how to write gadgets for Wave. For general information
+on how to write gadgets, see the Gadgets API Developers Guide.
+
+New! Wave gadgets now support Private State to store private participant data.
+
+
+.. toctree::
+
+   overview
+   debug
+   reference
