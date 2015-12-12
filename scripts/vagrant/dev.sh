@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 # Licensed to the Apache Software Foundation (ASF) under one
 # or more contributor license agreements.  See the NOTICE file
 # distributed with this work for additional information
@@ -15,48 +17,9 @@
 # specific language governing permissions and limitations
 # under the License.
 
+apt-get update
+apt-get install -y build-essential python-sphinx texlive-latex-recommended texlive-latex-extra texlive-fonts-recommended
 
-# Created by .ignore support plugin (hsz.mobi)
-### Python template
-# Byte-compiled / optimized / DLL files
-__pycache__/
-*.py[cod]
-
-# Sphinx documentation
-docs/_build/
-
-# Vagrant
-.vagrant/
-
-# PyBuilder
-target/
-
-
-### JetBrains template
-# Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm
-
-*.iml
-
-## Directory-based project format:
-.idea/
-# if you remove the above rule, at least ignore the following:
-
-### Eclipse template
-*.pydevproject
-.metadata
-.gradle
-bin/
-tmp/
-*.tmp
-*.bak
-*.swp
-*~.nib
-local.properties
-.settings/
-.loadpath
-
-# Eclipse Core
-.project
-
-
-build
+# theme specific install (read the docs theme)
+apt-get install -y python-pip
+pip install sphinx_rtd_theme

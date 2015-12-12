@@ -15,21 +15,21 @@
    specific language governing permissions and limitations
    under the License.
 
-Apache Wave (incubating)'s API
-==============================
+Title
+=====
 
-This documentation is an effort to transfer files from the documents provided
-by Google Wve in the effort to open source the Google Wave Project. Please note
-that the "Google Wave" documentation while most is still relevant for Apache
-Wave some things differ.
+Gadgets are a technology used across multiple Google properties to embed
+third-party applications inside our products. In Google Wave, gadgets can be
+used to create collaborative third-party applications inside a wave.
+
+This tutorial describes how to write gadgets for Wave. For general information
+on how to write gadgets, see the Gadgets API Developers Guide.
+
+New! Wave gadgets now support Private State to store private participant data.
+
 
 .. toctree::
-   :maxdepth: 2
 
    overview
-   faq/index
-   data/index
-   embed/index
-   extensions/index
-   gadgets/index
-   robots/index
+   debug
+   reference
