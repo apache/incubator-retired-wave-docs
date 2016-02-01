@@ -45,8 +45,22 @@ Apache Wave releases can soon be downloaded from the release repository, and are
 ::
 
    $ wget https://dist.apache.org/repos/dist/dev/incubator/wave/0.4.0-rc10/apache-wave-bin-0.4.0-incubating.tar.bz2
-   $ tar -zxf apache-wave-bin-0.4.tar.gz
+   $ tar -jxf apache-wave-bin-0.4.tar.gz
    $ cd apache-wave-bin-0.4.0-incubating
+
+From source package
+^^^^^^^^^^^^^^^^^^^^
+
+Should you want to build from source please use Java 7 for now, as changes in the latest JDK broke the build of this release.
+
+::
+
+   $ wget https://dist.apache.org/repos/dist/dev/incubator/wave/0.4.0-rc10/apache-wave-src-0.4.0-incubating.tar.bz2
+   $ tar -jxf apache-wave-src-0.4.tar.gz
+   $ cd apache-wave-src-0.4.0-incubating
+   $ ant
+
+You can find the most up-to-date (but possibly unstable) sourcecode at https://github.com/apache/incubator-wave or git://git.apache.org/incubator-wave.git.
 
 Running the server
 ------------------
