@@ -164,6 +164,8 @@ local.properties
 # TeXlipse plugin
 .texlipse
 
+### Backup files
+*~
 
-
+### sphinx results
 build
